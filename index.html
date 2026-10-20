@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f6f8">
+  <meta name="description" content="Practice Bubble Sort and Selection Sort by moving numbers into order.">
+  <title>Sort the numbers</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1 data-i18n="title">Sort the numbers</h1>
+      <div id="language-switch" class="language-switch" role="group" aria-label="Language">
+        <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+        <button type="button" data-language="ro" lang="ro" aria-label="Română" aria-pressed="false">RO</button>
+      </div>
+    </header>
+
+    <div class="settings">
+      <label>
+        <span data-i18n="algorithm">Algorithm</span>
+        <select id="algorithm">
+          <option value="bubble" data-i18n="bubble">Bubble Sort</option>
+          <option value="selection" data-i18n="selection">Selection Sort</option>
+        </select>
+      </label>
+      <label>
+        <span data-i18n="numbers">Numbers</span>
+        <select id="size">
+          <option value="6" selected>6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+        </select>
+      </label>
+      <button type="button" id="new-set" data-i18n="newSet">New numbers</button>
+    </div>
+
+    <section class="exercise" aria-labelledby="instruction">
+      <h2 id="instruction">Compare the blue bars.</h2>
+      <p id="rule">Swap if the left number is bigger.</p>
+
+      <div id="chart" class="chart" role="group" aria-label="Number bars"></div>
+
+      <p id="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div class="actions">
+        <button type="button" id="no-swap" class="primary">Keep this order</button>
+        <button type="button" id="hint" class="quiet" data-i18n="hint">Hint</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
